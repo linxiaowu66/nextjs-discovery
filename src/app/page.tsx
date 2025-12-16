@@ -18,14 +18,20 @@ export default function Home() {
               验证哪些 hooks 在服务端执行，哪些只在客户端执行
             </p>
           </a>
-          <div className="border border-gray-300 rounded-lg p-4">
-            <h2 className="text-xl font-semibold mb-2">缓存</h2>
-            <p className="text-sm text-gray-600">探索 Next.js 的各种缓存策略</p>
-          </div>
-          <div className="border border-gray-300 rounded-lg p-4">
-            <h2 className="text-xl font-semibold mb-2">局部渲染</h2>
-            <p className="text-sm text-gray-600">测试 Streaming 和 Suspense</p>
-          </div>
+          <a
+            href="/base-path-test"
+            className="border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+          >
+            <h2 className="text-xl font-semibold mb-2">basePath & assetPrefix</h2>
+            <p className="text-sm text-gray-600">探索 basePath 和 assetPrefix 的影响和坑</p>
+          </a>
+          <a
+            href="/env-test"
+            className="border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+          >
+            <h2 className="text-xl font-semibold mb-2">环境变量</h2>
+            <p className="text-sm text-gray-600">探索环境变量的加载和使用</p>
+          </a>
         </div>
       </div>
     </main>

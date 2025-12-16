@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="180" height="37" viewBox="0 0 180 37" fill="none">
+  <path d="M25.5 0L0 15V37L25.5 22V0Z" fill="black"/>
+  <path d="M25.5 0L51 15V37L25.5 22V0Z" fill="black"/>
+  <text x="60" y="26" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="black">Next.js</text>
+</svg>
+
