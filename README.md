@@ -109,6 +109,7 @@ pnpm dev
 - `/cache-test/full-route-cache` - Full Route Cache（全路由缓存）
 - `/cache-test/request-memoization` - Request Memoization（请求记忆化）
 - `/cache-test/router-cache` - Router Cache（客户端缓存）
+- `/cache-test/image-cache` - Image Cache（图片缓存）
 - `/cache-test/comparison` - 缓存对比和总结
 
 **测试内容：**
@@ -116,6 +117,7 @@ pnpm dev
 - 📦 Data Cache - fetch 请求的持久化缓存
 - 🗺️ Full Route Cache - 构建时预渲染整个路由
 - 🧭 Router Cache - 客户端路由缓存
+- 🖼️ Image Cache - Next.js Image 组件的优化和缓存
 
 **验证方法：**
 1. **开发环境：**`pnpm dev`（某些缓存行为会有差异）
@@ -123,7 +125,43 @@ pnpm dev
 3. 通过时间戳观察缓存是否生效
 4. 查看终端日志和浏览器控制台
 
-详见：`CACHE-GUIDE.md` - 完整缓存技术文档
+详见：
+- `CACHE-GUIDE.md` - 完整缓存技术文档
+- `IMAGE-CACHE-GUIDE.md` - 图片缓存和优化指南
+
+### 5. 渲染模式测试 (`/rendering-test`)
+
+测试 Next.js 的各种渲染策略和模式。
+
+**测试页面：**
+- `/rendering-test` - 渲染模式主页
+- `/rendering-test/static` - 静态渲染 (SSG)
+- `/rendering-test/dynamic` - 动态渲染 (SSR)
+- `/rendering-test/isr` - 增量静态再生成 (ISR)
+- `/rendering-test/streaming` - 流式渲染 (Streaming)
+- `/rendering-test/ppr` - 部分预渲染 (PPR, 实验性)
+- `/rendering-test/on-demand` - 按需重新验证
+- `/rendering-test/client` - 客户端渲染 (CSR)
+- `/rendering-test/hybrid` - 混合渲染
+
+**测试内容：**
+- 📄 Static Site Generation (SSG) - 构建时生成静态页面
+- 🔄 Server-Side Rendering (SSR) - 每次请求都渲染
+- 🔁 Incremental Static Regeneration (ISR) - 定时重新生成
+- ⚡ Streaming - 使用 Suspense 流式渲染
+- 🧪 Partial Prerendering (PPR) - 静态 + 动态混合（实验性）
+- 🎯 On-Demand Revalidation - 手动触发重新验证
+- 💻 Client-Side Rendering (CSR) - 浏览器渲染
+- 🔀 Hybrid Rendering - 组合多种渲染策略
+
+**验证方法：**
+1. **查看构建输出：**`pnpm build`（显示每个页面的渲染类型）
+2. **生产环境测试：**`pnpm build && pnpm start`
+3. **观察时间戳变化：**判断是否重新渲染
+4. **查看终端日志：**了解渲染时机
+5. **查看页面源代码：**验证服务端渲染的 HTML
+
+详见：`RENDERING-GUIDE.md` - 完整渲染模式技术文档
 
 ## 技术栈
 

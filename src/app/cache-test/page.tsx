@@ -132,6 +132,23 @@ export default function CacheTestPage() {
             <li>• Prefetch 预取行为</li>
           </ul>
         </Link>
+
+        {/* Image Cache */}
+        <Link
+          href="/cache-test/image-cache"
+          className="block bg-white border border-gray-300 rounded-lg p-6 hover:shadow-lg transition-shadow"
+        >
+          <h2 className="text-xl font-semibold mb-3 text-purple-600">
+            🖼️ Image Cache（图片缓存）
+          </h2>
+          <p className="text-sm text-gray-600 mb-3">测试 Next.js Image 组件的缓存和优化</p>
+          <ul className="text-xs space-y-1 text-gray-500">
+            <li>• 自动格式转换（WebP）</li>
+            <li>• 响应式图片加载</li>
+            <li>• 懒加载 vs Priority</li>
+            <li>• 服务端图片缓存</li>
+          </ul>
+        </Link>
       </div>
 
       {/* 缓存对比 */}

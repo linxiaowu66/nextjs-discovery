@@ -22,8 +22,12 @@ export default function Home() {
             href="/base-path-test"
             className="border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition-colors"
           >
-            <h2 className="text-xl font-semibold mb-2">basePath & assetPrefix</h2>
-            <p className="text-sm text-gray-600">探索 basePath 和 assetPrefix 的影响和坑</p>
+            <h2 className="text-xl font-semibold mb-2">
+              basePath & assetPrefix
+            </h2>
+            <p className="text-sm text-gray-600">
+              探索 basePath 和 assetPrefix 的影响和坑
+            </p>
           </a>
           <a
             href="/env-test"
@@ -38,7 +42,19 @@ export default function Home() {
             className="border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition-colors"
           >
             <h2 className="text-xl font-semibold mb-2">缓存机制</h2>
-            <p className="text-sm text-gray-600">探索 Next.js 的四种缓存机制</p>
+            <p className="text-sm text-gray-600">
+              探索 Next.js 的缓存机制（包括图片缓存）
+            </p>
+          </a>
+
+          <a
+            href="/rendering-test"
+            className="border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+          >
+            <h2 className="text-xl font-semibold mb-2">渲染模式</h2>
+            <p className="text-sm text-gray-600">
+              探索 Next.js 的各种渲染策略（SSG、SSR、ISR、Streaming、PPR）
+            </p>
           </a>
         </div>
       </div>

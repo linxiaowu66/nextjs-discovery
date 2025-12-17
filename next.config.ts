@@ -5,6 +5,9 @@ const basePath = process.env.BASE_PATH || ''; // 例如: '/my-app'
 const assetPrefix = process.env.ASSET_PREFIX || ''; // 例如: 'https://cdn.example.com'
 
 const nextConfig: NextConfig = {
+  // 启用 Cache Components (Partial Prerendering)
+  cacheComponents: true,
+
   // 配置 basePath - 当应用部署到子路径时使用
   // 示例: basePath: '/my-app' 会让应用运行在 /my-app 路径下
   basePath: basePath || undefined,
@@ -17,6 +20,17 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: basePath,
     NEXT_PUBLIC_ASSET_PREFIX: assetPrefix,
+  },
+
+  // 图片优化配置
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'picsum.photos',
+      },
+    ],
+    minimumCacheTTL: 60, // 图片缓存时间：60 秒
   },
 };
 
