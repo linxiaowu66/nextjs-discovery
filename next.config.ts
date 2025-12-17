@@ -6,7 +6,8 @@ const assetPrefix = process.env.ASSET_PREFIX || ''; // 例如: 'https://cdn.exam
 
 const nextConfig: NextConfig = {
   // 启用 Cache Components (Partial Prerendering)
-  cacheComponents: true,
+  // 注意: 与某些路由段配置不兼容，需要修改大量测试页面，暂时关闭
+  // cacheComponents: true,
 
   // 配置 basePath - 当应用部署到子路径时使用
   // 示例: basePath: '/my-app' 会让应用运行在 /my-app 路径下
