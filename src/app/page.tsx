@@ -32,6 +32,14 @@ export default function Home() {
             <h2 className="text-xl font-semibold mb-2">环境变量</h2>
             <p className="text-sm text-gray-600">探索环境变量的加载和使用</p>
           </a>
+
+          <a
+            href="/cache-test"
+            className="border border-gray-300 rounded-lg p-4 hover:bg-gray-50 transition-colors"
+          >
+            <h2 className="text-xl font-semibold mb-2">缓存机制</h2>
+            <p className="text-sm text-gray-600">探索 Next.js 的四种缓存机制</p>
+          </a>
         </div>
       </div>
     </main>

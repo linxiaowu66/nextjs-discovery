@@ -99,6 +99,32 @@ pnpm dev
 - `ENV-VARIABLES-GUIDE.md` - 完整技术文档
 - `ENV-SETUP-GUIDE.md` - 快速配置指南
 
+### 4. 缓存机制测试 (`/cache-test`)
+
+测试 Next.js 的四种缓存机制。
+
+**测试页面：**
+- `/cache-test` - 缓存机制主页
+- `/cache-test/data-cache` - Data Cache（fetch 缓存）
+- `/cache-test/full-route-cache` - Full Route Cache（全路由缓存）
+- `/cache-test/request-memoization` - Request Memoization（请求记忆化）
+- `/cache-test/router-cache` - Router Cache（客户端缓存）
+- `/cache-test/comparison` - 缓存对比和总结
+
+**测试内容：**
+- 🔄 Request Memoization - 单次渲染周期内的请求去重
+- 📦 Data Cache - fetch 请求的持久化缓存
+- 🗺️ Full Route Cache - 构建时预渲染整个路由
+- 🧭 Router Cache - 客户端路由缓存
+
+**验证方法：**
+1. **开发环境：**`pnpm dev`（某些缓存行为会有差异）
+2. **生产环境：**`pnpm build && pnpm start`（完整缓存行为）
+3. 通过时间戳观察缓存是否生效
+4. 查看终端日志和浏览器控制台
+
+详见：`CACHE-GUIDE.md` - 完整缓存技术文档
+
 ## 技术栈
 
 - **Next.js 16** - React 框架（最新版本）
